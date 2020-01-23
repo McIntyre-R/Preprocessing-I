@@ -141,6 +141,11 @@ body {
   width: 800px;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+}
 @font-face {
   font-family: 'Alata';
   font-style: normal;
@@ -164,6 +169,11 @@ header nav {
   justify-content: flex-end;
   padding: 4% 0;
 }
+@media (max-width: 500px) {
+  header nav {
+    justify-content: space-evenly;
+  }
+}
 header nav a {
   font-size: 2rem;
   padding: 0 1%;
@@ -177,6 +187,12 @@ header .headerSection {
   padding: 7% 5%;
   background-color: #E9ECEF;
   border-radius: 1%;
+}
+@media (max-width: 500px) {
+  header .headerSection {
+    text-align: center;
+    border-radius: 0;
+  }
 }
 header .headerSection img {
   border-radius: 6px;
@@ -197,6 +213,11 @@ header .headerSection .lorem {
   width: 60%;
   line-height: 140%;
 }
+@media (max-width: 500px) {
+  header .headerSection .lorem {
+    width: 100%;
+  }
+}
 header .headerSection button {
   padding: 1% 2%;
   background-color: #808080;
@@ -215,6 +236,12 @@ header .headerSection button:hover {
   padding: 2% 0 ;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .middleContent {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
 .middleContent .listenDiv {
   width: 55%;
 }
@@ -228,8 +255,19 @@ header .headerSection button:hover {
   height: 80%;
   line-height: 140%;
 }
+@media (max-width: 500px) {
+  .middleContent .listenDiv {
+    width: 100%;
+  }
+}
 .middleContent .tableDiv {
   width: 43%;
+}
+@media (max-width: 500px) {
+  .middleContent .tableDiv {
+    width: 100%;
+    padding: 3% 0;
+  }
 }
 .middleContent .tableDiv h2 {
   font-size: 3rem;
@@ -252,6 +290,11 @@ header .headerSection button:hover {
   padding-left: 10%;
   width: 100%;
   border-top: solid #808080 1px;
+}
+@media (max-width: 500px) {
+  .middleContent .tableDiv .skillTable td {
+    padding-left: 0;
+  }
 }
 .middleContent .tableDiv .skillTable td:first-child {
   border-left: none;

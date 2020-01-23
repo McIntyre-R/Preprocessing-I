@@ -63,29 +63,43 @@ html, body {
 body{
 	width: 800px;
 	margin: 0 auto;
-
+	@media (max-width: 500px){
+		.widthFull();
+	}
 }
 
 //styles 
 
 @import url('https://fonts.googleapis.com/css?family=Alata|Open+Sans&display=swap');
-
+//variables 
 @buttonGrey: #808080;
 @colorBackground: #E9ECEF;
 @fontOpen: 'Open Sans', sans-serif;
 @fontAlata: 'Alata', sans-serif;
+//mixins
+.flexBox(){
+	display: flex;
+}
 
+.widthFull(){
+	width:100%;
+}
+
+// stylings
 header{
 
 	font-family: @fontOpen;
 	
 	nav{
 		
-		width: 100%;
-		display: flex;
+		.widthFull();
+		.flexBox();
 		justify-content: flex-end;
 		padding: 4% 0;
 
+		@media (max-width: 500px){
+			justify-content: space-evenly;
+		}//nav media query end
 
 		a{
 			font-size: 2rem;
@@ -103,6 +117,11 @@ header{
 		padding: 7% 5%;
 		background-color: @colorBackground;
 		border-radius: 1%;
+		@media (max-width: 500px){
+			text-align: center;
+			border-radius: 0;
+		}//headerSection media query end
+
 
 		img{
 			border-radius: 6px;
@@ -125,6 +144,9 @@ header{
 			padding: 3% 0;
 			width: 60%;
 			line-height: 140%;
+			@media (max-width: 500px){
+				.widthFull();
+			}
 		}// lorem class end
 		button{
 			padding: 1% 2%;
@@ -144,37 +166,46 @@ header{
 
 
 .middleContent{
-	display: flex;
+	.flexBox();
 	padding: 2% 0 ;
 	justify-content: space-between;
-
+	@media (max-width: 500px){
+		flex-wrap: wrap;
+		text-align: center;
+	}//middle content media query end
 	.listenDiv{
 		width: 55%;
 
 		h2{
 			font-size: 4rem;
 			padding: 3% 0;
-		}
+		}//h2 end
 		p{	
 			font-family: @fontOpen;
 			font-size: 1.8rem;
 			height: 80%;
 			line-height: 140%;	
-		}
-	}
+		}//p end
+		@media (max-width: 500px){
+			.widthFull();
+		}//listen div media query end
+	}//listen div end
 	.tableDiv{
 		
 		width: 43%;
-		
+		@media (max-width: 500px){
+			.widthFull();
+			padding: 3% 0;
+		}//table div media query end
 		h2{
 	
 				font-size: 3rem;
 				padding: 3% 0;
 			
-		}
+		}//h2 end
 		.skillTable{
 			height: 80%;
-			width: 100%;
+			.widthFull();
 			font-size: 1.8rem;
 			font-family: @fontOpen;
 
@@ -186,29 +217,32 @@ header{
 		
 				.firstTD{
 					border-top:none;
-				}
+				}//firstTD end
 
 			 	td{
 					vertical-align: middle;
 					padding-left: 10%;
-					width: 100%;
+					.widthFull();
+					@media (max-width: 500px){
+						padding-left: 0;
+					}//td media query end
 
 				
 					border-top:solid @buttonGrey 1px;
 					
 					&:first-child {
 						border-left: none;
-					}
+					}//first child of td end
 			
 					
-				}
+				}// td end
 		
 			
 			
-		}
-	}
+		}//skill table end
+	}//table div end
 
-}
+}//middle content end
 
 .workHistory{
 
@@ -218,37 +252,37 @@ header{
 		font-size: 3rem;
 		font-family: @fontAlata;
 		padding: 3% 0;
-	}
+	} //h2 end
 
 	.workTable{
 
 		tr:nth-child(even) {background-color: #f2f2f2;}
 
-		width: 100%;
+		.widthFull();
 		text-align: center;
 
 		th,td{
 			font-size: 2rem;
 			padding: 1% 0 ;
 			
-		}
+		}//th td end
 		th{
 			font-weight: bold;
-		}
-	}
+		}//th end
+	}//work table end
 
-}
+}//work history end
 
 
 footer{
-	width: 100%;
+	.widthFull();
 	padding: 5% 0;
 	text-align: center;
 	font-size: 2rem;
 	color: white;
 	font-family: @fontOpen;
 	background-color: @buttonGrey;
-}
+} //footer end
 
 
 
