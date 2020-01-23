@@ -1,1 +1,290 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+@font-face {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alata Regular'), local('Alata-Regular'), url(https://fonts.gstatic.com/s/alata/v1/PbytFmztEwbIoce9zqM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+header {
+  font-family: 'Open Sans', sans-serif;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 4% 0;
+}
+header nav a {
+  font-size: 2rem;
+  padding: 0 1%;
+  text-decoration: none;
+  color: black;
+}
+header nav a:hover {
+  font-size: 2.1rem;
+}
+header .headerSection {
+  padding: 7% 5%;
+  background-color: #E9ECEF;
+  border-radius: 1%;
+}
+header .headerSection img {
+  border-radius: 6px;
+}
+header .headerSection h1 {
+  font-family: 'Alata', sans-serif;
+  font-size: 6rem;
+  padding: 1% 0;
+}
+header .headerSection .subtitle {
+  font-size: 1.8rem;
+  padding: 1% 0 5% 0;
+  border-bottom: 1px solid #808080;
+}
+header .headerSection .lorem {
+  font-size: 1.8rem;
+  padding: 3% 0;
+  width: 60%;
+  line-height: 140%;
+}
+header .headerSection button {
+  padding: 1% 2%;
+  background-color: #808080;
+  border: 1px #808080 solid;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+header .headerSection button:hover {
+  background-color: white;
+  color: #808080;
+}
+.middleContent {
+  display: flex;
+  padding: 2% 0 ;
+  justify-content: space-between;
+}
+.middleContent .listenDiv {
+  width: 55%;
+}
+.middleContent .listenDiv h2 {
+  font-size: 4rem;
+  padding: 3% 0;
+}
+.middleContent .listenDiv p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  height: 80%;
+  line-height: 140%;
+}
+.middleContent .tableDiv {
+  width: 43%;
+}
+.middleContent .tableDiv h2 {
+  font-size: 3rem;
+  padding: 3% 0;
+}
+.middleContent .tableDiv .skillTable {
+  height: 80%;
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Open Sans', sans-serif;
+  border-collapse: separate;
+  border: #808080 1px solid;
+  border-radius: 6px;
+}
+.middleContent .tableDiv .skillTable .firstTD {
+  border-top: none;
+}
+.middleContent .tableDiv .skillTable td {
+  vertical-align: middle;
+  padding-left: 10%;
+  width: 100%;
+  border-top: solid #808080 1px;
+}
+.middleContent .tableDiv .skillTable td:first-child {
+  border-left: none;
+}
+.workHistory {
+  padding: 2% 0 10% 0;
+}
+.workHistory h2 {
+  font-size: 3rem;
+  font-family: 'Alata', sans-serif;
+  padding: 3% 0;
+}
+.workHistory .workTable {
+  width: 100%;
+  text-align: center;
+}
+.workHistory .workTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.workHistory .workTable th,
+.workHistory .workTable td {
+  font-size: 2rem;
+  padding: 1% 0 ;
+}
+.workHistory .workTable th {
+  font-weight: bold;
+}
+footer {
+  width: 100%;
+  padding: 5% 0;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #808080;
+}

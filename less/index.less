@@ -52,8 +52,203 @@ table {
 * {
     box-sizing: border-box;
 }
+html {
+	font-size: 62.5%;
+}
 
 html, body {
-    height: 100%;
+	height: 100%;
+	
 }
+body{
+	width: 800px;
+	margin: 0 auto;
+
+}
+
+//styles 
+
+@import url('https://fonts.googleapis.com/css?family=Alata|Open+Sans&display=swap');
+
+@buttonGrey: #808080;
+@colorBackground: #E9ECEF;
+@fontOpen: 'Open Sans', sans-serif;
+@fontAlata: 'Alata', sans-serif;
+
+header{
+
+	font-family: @fontOpen;
+	
+	nav{
+		
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		padding: 4% 0;
+
+
+		a{
+			font-size: 2rem;
+			padding: 0 1%;
+			text-decoration: none;
+			color: black;
+			
+			&:hover{
+				font-size: 2.1rem;
+			}//link hover end
+		}//link end
+	}//nav end
+
+	.headerSection {
+		padding: 7% 5%;
+		background-color: @colorBackground;
+		border-radius: 1%;
+
+		img{
+			border-radius: 6px;
+		}//img end
+
+		h1{
+			font-family: @fontAlata;
+			font-size: 6rem;
+			padding: 1% 0;
+		}//h1 end
+
+		.subtitle{
+			font-size: 1.8rem;
+			padding: 1% 0 5% 0;
+			border-bottom: 1px solid @buttonGrey;
+		}//Subtitle class end
+
+		.lorem {
+			font-size: 1.8rem;
+			padding: 3% 0;
+			width: 60%;
+			line-height: 140%;
+		}// lorem class end
+		button{
+			padding: 1% 2%;
+			background-color: @buttonGrey;
+			border: 1px @buttonGrey solid;
+			font-size: 1.5rem;
+			color: white;
+			font-weight: bold;
+			border-radius: 5px;
+			&:hover{
+				background-color: white;
+				color: @buttonGrey;
+			}//buton hover end
+		}//button end	
+	}// header section class end
+} //header end
+
+
+.middleContent{
+	display: flex;
+	padding: 2% 0 ;
+	justify-content: space-between;
+
+	.listenDiv{
+		width: 55%;
+
+		h2{
+			font-size: 4rem;
+			padding: 3% 0;
+		}
+		p{	
+			font-family: @fontOpen;
+			font-size: 1.8rem;
+			height: 80%;
+			line-height: 140%;	
+		}
+	}
+	.tableDiv{
+		
+		width: 43%;
+		
+		h2{
+	
+				font-size: 3rem;
+				padding: 3% 0;
+			
+		}
+		.skillTable{
+			height: 80%;
+			width: 100%;
+			font-size: 1.8rem;
+			font-family: @fontOpen;
+
+			border-collapse:separate;
+    		border: @buttonGrey 1px solid;
+   			border-radius:6px;
+
+		
+		
+				.firstTD{
+					border-top:none;
+				}
+
+			 	td{
+					vertical-align: middle;
+					padding-left: 10%;
+					width: 100%;
+
+				
+					border-top:solid @buttonGrey 1px;
+					
+					&:first-child {
+						border-left: none;
+					}
+			
+					
+				}
+		
+			
+			
+		}
+	}
+
+}
+
+.workHistory{
+
+	padding: 2% 0 10% 0;
+
+	h2{
+		font-size: 3rem;
+		font-family: @fontAlata;
+		padding: 3% 0;
+	}
+
+	.workTable{
+
+		tr:nth-child(even) {background-color: #f2f2f2;}
+
+		width: 100%;
+		text-align: center;
+
+		th,td{
+			font-size: 2rem;
+			padding: 1% 0 ;
+			
+		}
+		th{
+			font-weight: bold;
+		}
+	}
+
+}
+
+
+footer{
+	width: 100%;
+	padding: 5% 0;
+	text-align: center;
+	font-size: 2rem;
+	color: white;
+	font-family: @fontOpen;
+	background-color: @buttonGrey;
+}
+
+
 
